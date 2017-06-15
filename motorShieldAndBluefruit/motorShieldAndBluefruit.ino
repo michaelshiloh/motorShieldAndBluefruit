@@ -1,4 +1,24 @@
 /*********************************************************************
+
+motorShieldAndBluefruit
+
+Example showing how to control a motor attached to an Adafruit Motor Shield V2
+by Bluetooth through the Adafruit Bluefruit SPI friend
+
+See sections identified by ADDITIONS FOR MOTOR SHIELD 
+
+Based on the Controller example in the Adafruit Bluefruit nRF51 library
+
+Change Log:
+
+28 March 2017 - Michael Shiloh - initial entry
+14 June 2017 - Michael Shiloh - improved comments
+
+
+
+The comments below are from the original Controller example in the 
+Adafruit Bluefruit nRF51 library and must be included:
+
   This is an example for our nRF51822 based Bluefruit LE modules
 
   Pick one up today in the adafruit shop!
@@ -25,7 +45,8 @@
 
 #include "BluefruitConfig.h"
 
-#include <Wire.h>
+// ADDITIONS FOR MOTOR SHIELD 
+
 #include <Adafruit_MotorShield.h>
 #include "utility/Adafruit_MS_PWMServoDriver.h"
 
@@ -35,7 +56,7 @@ Adafruit_MotorShield AFMS = Adafruit_MotorShield();
 // Adafruit_MotorShield AFMS = Adafruit_MotorShield(0x61);
 
 // Select which 'port' M1, M2, M3 or M4. In this case, M1
-Adafruit_DCMotor *myMotor = AFMS.getMotor(2);
+Adafruit_DCMotor *myMotor = AFMS.getMotor(1);
 // You can also make another motor on port M2
 //Adafruit_DCMotor *myOtherMotor = AFMS.getMotor(2);
 
@@ -178,10 +199,12 @@ void setup(void)
 
   Serial.println(F("******************************"));
 
+	// ADDITIONS FOR MOTOR SHIELD 
   AFMS.begin();  // create with the default frequency 1.6KHz
 
 }
 
+// ADDITIONS FOR MOTOR SHIELD 
 int motorSpeed = 0;
 
 /**************************************************************************/
@@ -223,32 +246,35 @@ void loop(void)
       Serial.println(" released");
     }
 
-    if (pressed && buttnum == 5) {
-      Serial.print(" Faster");
-      motorSpeed += 5;
-      myMotor->setSpeed(motorSpeed);
-    }
-    if (pressed && buttnum == 6) {
-      Serial.print(" Slower");
-      motorSpeed -= 5;
-      myMotor->setSpeed(motorSpeed);
-    }
-    if (pressed && buttnum == 7) {
+		// ADDITIONS FOR MOTOR SHIELD 
+    if (pressed ) {
+			if (buttnum == 5) {
+				Serial.print(" Forward");
+				myMotor->run(FORWARD);
+			}
+			if (buttnum == 6) {
       Serial.print(" Backward");
       myMotor->run(BACKWARD);
-    }
-    if (pressed && buttnum == 8) {
-      Serial.print(" Forward");
-      myMotor->run(FORWARD);
-    }
-    if (pressed && buttnum == 1) {
+			}
+			if (buttnum == 7) {
+				Serial.print(" Slower");
+				motorSpeed -= 5;
+				Serial.print (" Speed = ");
+				Serial.println(motorSpeed);
+				myMotor->setSpeed(motorSpeed);
+			}
+			if (buttnum == 8) {
+				Serial.print(" Faster");
+				motorSpeed += 5;
+				Serial.print (" Speed = ");
+				Serial.println(motorSpeed);
+				myMotor->setSpeed(motorSpeed);
+			}
+		} else { // button has been released
       Serial.print(" Stop");
       myMotor->run(RELEASE);
     }
-
-    Serial.print (" Speed = ");
-    Serial.println(motorSpeed);
-  }
+  } // end of button event
 
   // GPS Location
   if (packetbuffer[1] == 'L') {
