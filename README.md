@@ -37,17 +37,17 @@ name of your Bluetooth module:
 Note that this is case sensitive (capitolization matters),
 and that there must be no spaces.
 Type this in the top section of the serial monitor, 
-then press send. You should see an 'OK'.
+then press send. You should see an ```OK```.
 
-4. Type in ATZ and click send. You should see another 'OK'.
+4. Type in ATZ and click send. You should see another ```OK```.
 
 5. The name should now be changed, the Arduino example will issue a factory
 reset which will erase the name. To prevent the factory reset,
 
 Find the phrase ```FACTORYRESET_ENABLE``` which will look like this:
 
-#define FACTORYRESET_ENABLE 1
-#define MINIMUM_FIRMWARE_VERSION "0.6.6"
-#define MODE_LED_BEHAVIOUR "MODE"
+#define FACTORYRESET_ENABLE 1  
+#define MINIMUM_FIRMWARE_VERSION "0.6.6"  
+#define MODE_LED_BEHAVIOUR "MODE"  
 
 Change the 1 to a 0, and this disables factory reset. 
