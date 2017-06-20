@@ -21,7 +21,7 @@ the motor shield (image TBA)
 
 ### Software
 
-For a code example, see [motorShieldAndBluefruit](motorShieldAndBluefruit.ino)
+For a code example, see [this example]motorShieldAndBluefruit/motorShieldAndBluefruit.ino)
 
 ### Hints
 
