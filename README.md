@@ -54,7 +54,7 @@ Change the 1 to a 0, and this disables factory reset.
 
 ### Providing separate power for servo motors
 
-Adafruit has made it simple to provide separeate power to the servo
+Adafruit has made it easy to provide separate power to the servo
 motors:
 
 1. Carefully cut the 5V trace where indicated on the back of the motor shield.
@@ -64,13 +64,15 @@ small length of copper that I can actually see:
 ![](images/cutTraceToUseOptionalServoInput.jpg)
 
 2. Install screw terminals in the holes, or solder wires from a 6V battery
-pack to the indicated holes. Make sure the polarity is correct: *red* is
-*positive* and *black* is *negative*:
+pack directly, to the indicated holes. 
+Make sure the polarity is correct: **red** is
+**positive** and **black** is **negative**:
 
 ![](images/motorShieldOptServo_bb.png)
 
 *Note 1*: This provides power to the two servo headers that are pre-installed
-on the shield. If you
+on the shield (labelled Servo 1 and Servo 2.)
+If you
 add more headers for more servo motors, you will need to add your own
 connection to this new power connector. The ground pin can be the same
 as the Arduino ground, since all grounds are common, but the power pin
