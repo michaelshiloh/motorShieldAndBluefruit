@@ -72,11 +72,13 @@ Make sure the polarity is correct: **red** is
 
 *Note 1*: This provides power to the two servo headers that are pre-installed
 on the shield (labelled Servo 1 and Servo 2.)
-If you
-add more headers for more servo motors, you will need to add your own
-connection to this new power connector. The ground pin can be the same
-as the Arduino ground, since all grounds are common, but the power pin
-must go to the positive terminal of this new connector.
+If you add more headers for more servo motors, 
+you will need to add your own connection to this new power connector. 
+The ground pin can be the same as the Arduino ground, 
+since all grounds are common, 
+and the the middle pin (the 5V pin)
+should be connected to the middle pin of either of the two 
+pre-installed servo headers.
 
 *Note 2*: The power to the servo motors is separate from the power to the DC
 motors. This means more battery packs, and it allows you to have a different
