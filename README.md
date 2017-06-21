@@ -78,7 +78,8 @@ The ground pin can be the same as the Arduino ground,
 since all grounds are common, 
 and the the middle pin (the 5V pin)
 should be connected to the middle pin of either of the two 
-pre-installed servo headers.
+pre-installed servo headers
+(which are now connected to this new power connector).
 
 *Note 2*: The power to the servo motors is separate from the power to the DC
 motors. This means more battery packs, and it allows you to have a different
