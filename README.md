@@ -23,7 +23,7 @@ the motor shield (image TBA)
 
 For a code example, see [this example](motorShieldAndBluefruit/motorShieldAndBluefruit.ino)
 
-### Hints
+### Changing the name of your Bluefruit Friend
 
 If there are many similar devices, you might find it useful to change the 
 name of your Bluetooth module:
@@ -51,3 +51,31 @@ Find the phrase ```FACTORYRESET_ENABLE``` which will look like this:
 #define MODE_LED_BEHAVIOUR "MODE"  
 
 Change the 1 to a 0, and this disables factory reset. 
+
+### Providing separate power for servo motors
+
+Adafruit has made it simple to provide separeate power to the servo
+motors:
+
+1. Carefully cut the 5V trace where indicated on the back of the motor shield.
+To make sure there are no slivers of copper remaining, I like to remove a 
+small length of copper that I can actually see:
+
+![](images/cutTraceToUseOptionalServoInput.jpg)
+
+2. Install screw terminals in the holes, or solder wires from a 6V battery
+pack to the indicated holes. Make sure the polarity is correct: *red* is
+*positive* and *black* is *negative*:
+
+![](images/motorShieldOptServo_bb.png)
+
+*Note 1*: This provides power to the two servo headers that are pre-installed
+on the shield. If you
+add more headers for more servo motors, you will need to add your own
+connection to this new power connector. The ground pin can be the same
+as the Arduino ground, since all grounds are common, but the power pin
+must go to the positive terminal of this new connector.
+
+*Note 2*: The power to the servo motors is separate from the power to the DC
+motors. This means more battery packs, and it allows you to have a different
+voltage for the DC motors than the servo motors.
