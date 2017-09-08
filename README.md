@@ -9,7 +9,7 @@ Libraries**
 2. In the search space type **adafruit motor shield v2**
 
 3. Click in the "Adafruit Motor Shield V2 Library" line and an **Install** button
-will appear. Click the Install button.
+will appear. Click the **Install** button.
 
 4. Close the Library Manager window
 

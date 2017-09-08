@@ -32,18 +32,18 @@ Adafruit Bluefruit nRF51 library and must be included:
   any redistribution
 *********************************************************************/
 
-#include <string.h>
+//#include <string.h>
 #include <Arduino.h>
-#include <SPI.h>
-#if not defined (_VARIANT_ARDUINO_DUE_X_) && not defined (_VARIANT_ARDUINO_ZERO_)
-#include <SoftwareSerial.h>
-#endif
+////#include <SPI.h>
+////#if not defined (_VARIANT_ARDUINO_DUE_X_) && not defined (_VARIANT_ARDUINO_ZERO_)
+//#include <SoftwareSerial.h>
+//#endif
 
-#include "Adafruit_BLE.h"
-#include "Adafruit_BluefruitLE_SPI.h"
-#include "Adafruit_BluefruitLE_UART.h"
-
-#include "BluefruitConfig.h"
+//#include "Adafruit_BLE.h"
+//#include "Adafruit_BluefruitLE_SPI.h"
+//#include "Adafruit_BluefruitLE_UART.h"
+//
+//#include "BluefruitConfig.h"
 
 // ADDITIONS FOR MOTOR SHIELD 
 
@@ -108,7 +108,7 @@ Adafruit_DCMotor *myMotor = AFMS.getMotor(1);
 // Adafruit_BluefruitLE_UART ble(BLUEFRUIT_HWSERIAL_NAME, BLUEFRUIT_UART_MODE_PIN);
 
 /* ...hardware SPI, using SCK/MOSI/MISO hardware SPI pins and then user selected CS/IRQ/RST */
-Adafruit_BluefruitLE_SPI ble(BLUEFRUIT_SPI_CS, BLUEFRUIT_SPI_IRQ, BLUEFRUIT_SPI_RST);
+//Adafruit_BluefruitLE_SPI ble(BLUEFRUIT_SPI_CS, BLUEFRUIT_SPI_IRQ, BLUEFRUIT_SPI_RST);
 
 /* ...software SPI, using SCK/MOSI/MISO user-defined SPI pins and then user selected CS/IRQ/RST */
 //Adafruit_BluefruitLE_SPI ble(BLUEFRUIT_SPI_SCK, BLUEFRUIT_SPI_MISO,
@@ -123,7 +123,7 @@ void error(const __FlashStringHelper*err) {
 }
 
 // function prototypes over in packetparser.cpp
-uint8_t readPacket(Adafruit_BLE *ble, uint16_t timeout);
+//uint8_t readPacket(Adafruit_BLE *ble, uint16_t timeout);
 float parsefloat(uint8_t *buffer);
 void printHex(const uint8_t * data, const uint32_t numBytes);
 
@@ -149,55 +149,55 @@ void setup(void)
   /* Initialise the module */
   Serial.print(F("Initialising the Bluefruit LE module: "));
 
-  if ( !ble.begin(VERBOSE_MODE) )
-  {
-    error(F("Couldn't find Bluefruit, make sure it's in CoMmanD mode & check wiring?"));
-  }
-  Serial.println( F("OK!") );
-
-  if ( FACTORYRESET_ENABLE )
-  {
-    /* Perform a factory reset to make sure everything is in a known state */
-    Serial.println(F("Performing a factory reset: "));
-    if ( ! ble.factoryReset() ) {
-      error(F("Couldn't factory reset"));
-    }
+//  if ( !ble.begin(VERBOSE_MODE) )
+//  {
+//    error(F("Couldn't find Bluefruit, make sure it's in CoMmanD mode & check wiring?"));
+//  }
+//  Serial.println( F("OK!") );
+//
+//  if ( FACTORYRESET_ENABLE )
+//  {
+//    /* Perform a factory reset to make sure everything is in a known state */
+//    Serial.println(F("Performing a factory reset: "));
+//    if ( ! ble.factoryReset() ) {
+//      error(F("Couldn't factory reset"));
+//    }
   }
 
 
   /* Disable command echo from Bluefruit */
-  ble.echo(false);
-
-  Serial.println("Requesting Bluefruit info:");
-  /* Print Bluefruit information */
-  ble.info();
-
-  Serial.println(F("Please use Adafruit Bluefruit LE app to connect in Controller mode"));
-  Serial.println(F("Then activate/use the sensors, color picker, game controller, etc!"));
-  Serial.println();
-
-  ble.verbose(false);  // debug info is a little annoying after this point!
-
-  /* Wait for connection */
-  while (! ble.isConnected()) {
-    delay(500);
-  }
-
-  Serial.println(F("******************************"));
-
-  // LED Activity command is only supported from 0.6.6
-  if ( ble.isVersionAtLeast(MINIMUM_FIRMWARE_VERSION) )
-  {
-    // Change Mode LED Activity
-    Serial.println(F("Change LED activity to " MODE_LED_BEHAVIOUR));
-    ble.sendCommandCheckOK("AT+HWModeLED=" MODE_LED_BEHAVIOUR);
-  }
-
-  // Set Bluefruit to DATA mode
-  Serial.println( F("Switching to DATA mode!") );
-  ble.setMode(BLUEFRUIT_MODE_DATA);
-
-  Serial.println(F("******************************"));
+//  ble.echo(false);
+//
+//  Serial.println("Requesting Bluefruit info:");
+//  /* Print Bluefruit information */
+//  ble.info();
+//
+//  Serial.println(F("Please use Adafruit Bluefruit LE app to connect in Controller mode"));
+//  Serial.println(F("Then activate/use the sensors, color picker, game controller, etc!"));
+//  Serial.println();
+//
+//  ble.verbose(false);  // debug info is a little annoying after this point!
+//
+//  /* Wait for connection */
+//  while (! ble.isConnected()) {
+//    delay(500);
+//  }
+//
+//  Serial.println(F("******************************"));
+//
+//  // LED Activity command is only supported from 0.6.6
+//  if ( ble.isVersionAtLeast(MINIMUM_FIRMWARE_VERSION) )
+//  {
+//    // Change Mode LED Activity
+//    Serial.println(F("Change LED activity to " MODE_LED_BEHAVIOUR));
+//    ble.sendCommandCheckOK("AT+HWModeLED=" MODE_LED_BEHAVIOUR);
+//  }
+//
+//  // Set Bluefruit to DATA mode
+//  Serial.println( F("Switching to DATA mode!") );
+//  ble.setMode(BLUEFRUIT_MODE_DATA);
+//
+//  Serial.println(F("******************************"));
 
 	// ADDITIONS FOR MOTOR SHIELD 
   AFMS.begin();  // create with the default frequency 1.6KHz
@@ -215,7 +215,7 @@ int motorSpeed = 0;
 void loop(void)
 {
   /* Wait for new data to arrive */
-  uint8_t len = readPacket(&ble, BLE_READPACKET_TIMEOUT);
+//  uint8_t len = readPacket(&ble, BLE_READPACKET_TIMEOUT);
   if (len == 0) return;
 
   /* Got a packet! */
@@ -275,7 +275,7 @@ void loop(void)
       myMotor->run(RELEASE);
     }
   } // end of button event
-
+/*
   // GPS Location
   if (packetbuffer[1] == 'L') {
     float lat, lon, alt;
@@ -339,4 +339,4 @@ void loop(void)
     Serial.print(z); Serial.print('\t');
     Serial.print(w); Serial.println();
   }
-}
+}*/
