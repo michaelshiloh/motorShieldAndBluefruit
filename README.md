@@ -10,7 +10,7 @@ Uno these are on pins A4 and A5. If you plan to attach servo motors to the
 shield, this uses pins 9 and 10 additionally.
 
 * Adafruit Bluefruit LE SPI Friend uses SPI. According to the [wiring
-* diagram](https://learn.adafruit.com/introducing-the-adafruit-bluefruit-spi-breakout/wiring)  
+	diagram](https://learn.adafruit.com/introducing-the-adafruit-bluefruit-spi-breakout/wiring)  
   the default wiring would use pins 4, 7, 8, 11, 12, and 13. (This can be
 	changed, see the documentation)
 
