@@ -3,7 +3,7 @@
 ## Combining the Adafruit Motor Shield V2 for Arduino with the Adafruit Bluefruit LE SPI Friend
 
 ### If you have not already done so, install the library for the Motor Shield:
-1. In arduino, select **Sketch**, **Include Library**, and then **Manage
+1. In Arduino, select **Sketch**, **Include Library**, and then **Manage
 Libraries**
 
 2. In the search space type **adafruit motor shield v2**
