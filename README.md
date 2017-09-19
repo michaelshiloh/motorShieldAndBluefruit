@@ -96,9 +96,9 @@ motors. This means more battery packs, and it allows you to have a different
 voltage for the DC motors than the servo motors.
 
 
-![1](images/bluefruit/1.jpg)
-![2](images/bluefruit/2.jpg)
-![3](images/bluefruit/3.jpg)
+![](images/bluefruit/1.jpg)
+![](images/bluefruit/2.jpg)
+![](images/bluefruit/3.jpg)
 ![4](images/bluefruit/4.jpg)
 ![5](images/bluefruit/5.jpg)
 ![6](images/bluefruit/6.jpg)
