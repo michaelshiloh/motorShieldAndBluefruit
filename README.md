@@ -102,7 +102,13 @@ check theirs in return.
 
 Then I added the three that are in a row: pins 13, 12, and 11:
 
-(picture)
+![120](images/bluefruit/120.jpg)
+![121](images/bluefruit/121.jpg)
+
+Check each solder joint as you make it that it is nice and shiny and that 
+you haven't accidentally soldered two pins together:
+
+![124](images/bluefruit/124.jpg)
 
 Then CS
 
@@ -282,11 +288,8 @@ voltage for the DC motors than the servo motors.
 ![117](images/bluefruit/117.jpg)
 ![118](images/bluefruit/118.jpg)
 ![119](images/bluefruit/119.jpg)
-![120](images/bluefruit/120.jpg)
-![121](images/bluefruit/121.jpg)
 ![122](images/bluefruit/122.jpg)
 ![123](images/bluefruit/123.jpg)
-![124](images/bluefruit/124.jpg)
 ![125](images/bluefruit/125.jpg)
 ![126](images/bluefruit/126.jpg)
 ![127](images/bluefruit/127.jpg)
