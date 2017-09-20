@@ -26,8 +26,76 @@ shield, this uses pins 9 and 10 additionally.
 
 ### Construction
 
+Start by drawing a schematic. As you read, there are many options, but
+it's usually a good idea to start with the default unless you have a 
+good reason to do differently.
+
+I started with
+[this](https://learn.adafruit.com/introducing-the-adafruit-bluefruit-spi-breakout/wiring#default-pinout)
+table in the Adafruit guide. Note that they don't list the DFU pin (since it
+isn't used) but I added it to my schematic to remind me not to use it:
+
+(schematic)
+
 You can mount a header for the Bluefruit module in the prototyping area of 
-the motor shield (image TBA)
+the motor shield 
+
+Think about where you want the module to sit. Since some of the wires
+connect directly to pins 13, 12, and 11, it might be convenient to put it 
+nearby. Leave room for making your connections. I left only one row, you might
+want to leave more so that it's not so tight. Put the header 
+and Bluetooth module in loosely while you experiment to
+help you visualize:
+
+(picture of module and header loosely in shield)
+
+Before you start soldering, draw a diagram of how you will make the 
+connections. Think about where the wires will go. 
+
+Remember that the holes next to the Arduino pins are automatically connected
+to the Arduino pins, but the holes next to your header will not automatically
+connect to the header. You must make this connection yourself by folding the 
+wire on the back side of the board and soldering it to the header pin
+
+[Wiring Diagram](images/bluefruit/diagram.jpg)
+
+Solder in the female header
+
+(picture of header soldered in)
+
+Before you start soldering the wires in place, think about the order.
+Will any wires block holes 
+that you later need access to? 
+
+I decided to start with GND and 5V
+
+(picture)
+
+After every step compare what you have done with the original table (not your
+schematic or diagram in case you made a mistake there). Plug in the module
+and check that the labels on the module corresponds to the pins you are 
+connecting.
+
+If others are near you, ask them to double check your work, and offer to 
+check theirs in return.
+
+Then I added the three that are in a row: pins 13, 12, and 11:
+
+(picture)
+
+Then CS
+
+(picture)
+
+At this point I realized that the wire from IRQ to pin 7 might
+cover the hole next to RST, so I did the wire to RST before the wire 
+to IRQ.
+
+(picture)
+
+and finally the wire to IRQ:
+
+(picture)
 
 ### Software
 
