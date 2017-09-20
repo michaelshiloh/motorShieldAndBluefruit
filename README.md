@@ -35,7 +35,7 @@ I started with
 table in the Adafruit guide. Note that they don't list the DFU pin (since it
 isn't used) but I added it to my schematic to remind me not to use it:
 
-(schematic)
+![](images/bluefruit/73.jpg)
 
 You can mount a header for the Bluefruit module in the prototyping area of 
 the motor shield 
@@ -47,7 +47,7 @@ want to leave more so that it's not so tight. Put the header
 and Bluetooth module in loosely while you experiment to
 help you visualize:
 
-(picture of module and header loosely in shield)
+![72](images/bluefruit/72.jpg)
 
 Before you start soldering, draw a diagram of how you will make the 
 connections. Think about where the wires will go. 
@@ -61,15 +61,36 @@ wire on the back side of the board and soldering it to the header pin
 
 Solder in the female header
 
-(picture of header soldered in)
+![75](images/bluefruit/75.jpg)
 
 Before you start soldering the wires in place, think about the order.
 Will any wires block holes 
 that you later need access to? 
 
+Wire colors are very important! Always use red for 5V and black for ground (or
+GND). Don't use these colors for any other connections.
+
+Wire choice is important too: Use 22 AWS solid core wire.
+
 I decided to start with GND and 5V
 
-(picture)
+![77](images/bluefruit/77.jpg)
+
+Don't try to wrap the wires around the pins of the header. There isn't room.
+Just bend the wire a little bit to hold it in place while you solder it.
+
+![87](images/bluefruit/87.jpg)
+![89](images/bluefruit/89.jpg)
+
+After soldering the wire to the header pin,
+cut off the excess very close to the pin. Don't be afraid to take
+some solder with it:
+
+![90](images/bluefruit/90.jpg)
+
+Now the 5V wire:
+
+![94](images/bluefruit/94.jpg)
 
 After every step compare what you have done with the original table (not your
 schematic or diagram in case you made a mistake there). Plug in the module
@@ -164,7 +185,6 @@ motors. This means more battery packs, and it allows you to have a different
 voltage for the DC motors than the servo motors.
 
 
-![](images/bluefruit/1.jpg)
 ![](images/bluefruit/2.jpg)
 ![](images/bluefruit/3.jpg)
 ![4](images/bluefruit/4.jpg)
@@ -226,12 +246,7 @@ voltage for the DC motors than the servo motors.
 ![69](images/bluefruit/69.jpg)
 ![70](images/bluefruit/70.jpg)
 ![71](images/bluefruit/71.jpg)
-![72](images/bluefruit/72.jpg)
-![73](images/bluefruit/73.jpg)
-![74](images/bluefruit/74.jpg)
-![75](images/bluefruit/75.jpg)
 ![76](images/bluefruit/76.jpg)
-![77](images/bluefruit/77.jpg)
 ![78](images/bluefruit/78.jpg)
 ![79](images/bluefruit/79.jpg)
 ![80](images/bluefruit/80.jpg)
@@ -241,16 +256,9 @@ voltage for the DC motors than the servo motors.
 ![84](images/bluefruit/84.jpg)
 ![85](images/bluefruit/85.jpg)
 ![86](images/bluefruit/86.jpg)
-![87](images/bluefruit/87.jpg)
 ![88](images/bluefruit/88.jpg)
-![89](images/bluefruit/89.jpg)
-![90](images/bluefruit/90.jpg)
 ![91](images/bluefruit/91.jpg)
 ![92](images/bluefruit/92.jpg)
-![93](images/bluefruit/93.jpg)
-![94](images/bluefruit/94.jpg)
-![95](images/bluefruit/95.jpg)
-![96](images/bluefruit/96.jpg)
 ![97](images/bluefruit/97.jpg)
 ![98](images/bluefruit/98.jpg)
 ![99](images/bluefruit/99.jpg)
@@ -294,7 +302,6 @@ voltage for the DC motors than the servo motors.
 ![137](images/bluefruit/137.jpg)
 ![138](images/bluefruit/138.jpg)
 ![139](images/bluefruit/139.jpg)
-![140](images/bluefruit/140.jpg)
 ![141](images/bluefruit/141.jpg)
 ![142](images/bluefruit/142.jpg)
 ![143](images/bluefruit/143.jpg)
@@ -308,7 +315,6 @@ voltage for the DC motors than the servo motors.
 ![151](images/bluefruit/151.jpg)
 ![152](images/bluefruit/152.jpg)
 ![153](images/bluefruit/153.jpg)
-![154](images/bluefruit/154.jpg)
 ![155](images/bluefruit/155.jpg)
 ![156](images/bluefruit/156.jpg)
 ![157](images/bluefruit/157.jpg)
