@@ -57,7 +57,7 @@ to the Arduino pins, but the holes next to your header will not automatically
 connect to the header. You must make this connection yourself by folding the 
 wire on the back side of the board and soldering it to the header pin
 
-[Wiring Diagram](images/bluefruit/diagram.jpg)
+![Wiring Diagram](images/bluefruit/diagram.jpg)
 
 Solder in the female header
 
