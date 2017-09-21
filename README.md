@@ -123,7 +123,9 @@ Then I added the three that are in a row: pins 13, 12, and 11:
 ![121](images/bluefruit/121.jpg)
 
 Check each solder joint as you make it that it is nice and shiny and that 
-you haven't accidentally soldered two pins together:
+you haven't accidentally soldered two pins together.
+
+As you solder each wire, remember to trim off the excess wire very close:
 
 ![124](images/bluefruit/124.jpg)
 
@@ -137,8 +139,8 @@ cover the hole next to RST, so I did the wire to RST before the wire
 to IRQ. Remember that you have to skip the DFU pin so think carefully
 and make sure your diagram, your wire, the label on the Arduino pin, the label
 on the Bluefruit module, and the default wiring table are all in
-agreement.
-before you solder
+agreement
+before you solder.
 
 ![138](images/bluefruit/138.jpg)
 
@@ -157,7 +159,13 @@ For many more pictures of the assembly process look [here](extraImages.md)
 
 ## Software
 
-### If you have not already done so, install the library for the Motor Shield:
+Before writing any of your own code, test that each device works 
+with the built in examples
+
+### Motor Shield
+
+#### Install the Motor Shield library
+
 1. In Arduino, select **Sketch**, **Include Library**, and then **Manage
 Libraries**
 
@@ -167,6 +175,30 @@ Libraries**
 will appear. Click the **Install** button.
 
 4. Close the Library Manager window
+
+5. Test that the library was correctly installed by verifying (compiling)
+one of the built in examples. I usually use **File** -> **Examples** -> 
+
+(not finished yet)
+
+#### Test the Motor Shield
+
+1. Connect a motor to 
+
+(not finished yet)
+
+
+### Bluefruit SPI Friend
+
+#### Install the Bluefruit SPI Friend library
+
+(tba)
+
+### Testing the Bluefruit SPI Friend
+
+(tba)
+
+### Combining the Motor Shield and the Bluefruit SPI Friend
 
 For a code example, see [this example](motorShieldAndBluefruit/motorShieldAndBluefruit.ino)
 
