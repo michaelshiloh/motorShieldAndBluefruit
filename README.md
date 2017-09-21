@@ -53,7 +53,7 @@ Before you start soldering, draw a diagram of how you will make the
 connections. Think about where the wires will go. 
 
 Remember that the holes next to the Arduino pins are automatically connected
-to the Arduino pins, but the holes next to your header will not automatically
+to the Arduino pins, but the holes next to your header will *not* automatically
 connect to the header. You must make this connection yourself by folding the 
 wire on the back side of the board and soldering it to the header pin
 
@@ -72,7 +72,7 @@ GND). Don't use these colors for any other connections.
 
 Wire choice is important too: Use 22 AWS solid core wire.
 
-I decided to start with GND and 5V
+I decided to start with GND and 5V. First GND:
 
 ![77](images/bluefruit/77.jpg)
 
@@ -87,6 +87,19 @@ cut off the excess very close to the pin. Don't be afraid to take
 some solder with it:
 
 ![90](images/bluefruit/90.jpg)
+
+If you make a mistake, it is usually easier to cut the wire in half and
+to remove each piece separately. 
+
+
+![141](images/bluefruit/141.jpg)
+![142](images/bluefruit/142.jpg)
+
+Think about how the wire is bent and 
+wiggle it gently to unbend it while heating the solder with
+the soldering iron. You can use the soldering iron tip gently
+to help unbend the wires. Try not to use too much force as this might 
+damage the board.
 
 Now the 5V wire:
 
@@ -110,19 +123,31 @@ you haven't accidentally soldered two pins together:
 
 ![124](images/bluefruit/124.jpg)
 
-Then CS
+Then CS. Remember that it goes to Arduino pin 8 so make it a little longer
+and double check that you have it in the right holes before you solder:
 
-(picture)
+![132](images/bluefruit/132.jpg)
 
 At this point I realized that the wire from IRQ to pin 7 might
 cover the hole next to RST, so I did the wire to RST before the wire 
-to IRQ.
+to IRQ. Remember that you have to skip the DFU pin so think carefully
+and make sure your diagram, your wire, the label on the Arduino pin, the label
+on the Bluefruit module, and the default wiring table are all in
+agreement.
+before you solder
 
-(picture)
+![138](images/bluefruit/138.jpg)
 
 and finally the wire to IRQ:
 
-(picture)
+![148](images/bluefruit/148.jpg)
+
+Inspect all your solder joints carefully. Make sure all the joints are shiny
+and complete, that the solder flows smoothly over the wire and over the pins.
+Make sure there isn't too much solder, and make sure solder doesn't "bridge"
+two (or more) adjacent pins together.
+
+![150](images/bluefruit/150.jpg)
 
 ### Software
 
@@ -297,27 +322,18 @@ voltage for the DC motors than the servo motors.
 ![129](images/bluefruit/129.jpg)
 ![130](images/bluefruit/130.jpg)
 ![131](images/bluefruit/131.jpg)
-![132](images/bluefruit/132.jpg)
 ![133](images/bluefruit/133.jpg)
 ![134](images/bluefruit/134.jpg)
 ![135](images/bluefruit/135.jpg)
 ![136](images/bluefruit/136.jpg)
 ![137](images/bluefruit/137.jpg)
-![138](images/bluefruit/138.jpg)
 ![139](images/bluefruit/139.jpg)
-![141](images/bluefruit/141.jpg)
-![142](images/bluefruit/142.jpg)
 ![143](images/bluefruit/143.jpg)
 ![144](images/bluefruit/144.jpg)
 ![145](images/bluefruit/145.jpg)
 ![146](images/bluefruit/146.jpg)
 ![147](images/bluefruit/147.jpg)
-![148](images/bluefruit/148.jpg)
 ![149](images/bluefruit/149.jpg)
-![150](images/bluefruit/150.jpg)
-![151](images/bluefruit/151.jpg)
-![152](images/bluefruit/152.jpg)
-![153](images/bluefruit/153.jpg)
 ![155](images/bluefruit/155.jpg)
 ![156](images/bluefruit/156.jpg)
 ![157](images/bluefruit/157.jpg)
