@@ -23,7 +23,8 @@ shield, this uses pins 9 and 10 additionally.
   the default wiring would use pins 4, 7, 8, 11, 12, and 13. (This can be
 	changed, see the documentation)
 
-This means that we can use the default wiring for both devices.
+Since there are no pins used by both devices, we can use the default wiring.
+
 The motor shield can not be changed, but the Bluefruit module
 can be wired differently. 
 Unless you have a good reason to do differently,
