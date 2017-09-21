@@ -1,19 +1,18 @@
 # motorShieldAndBluefruit
 
-## Combining the Adafruit Motor Shield V2 for Arduino with the Adafruit Bluefruit LE SPI Friend
+# Combining the Adafruit Motor Shield V2 for Arduino with the Adafruit Bluefruit LE SPI Friend
 
-### If you have not already done so, install the library for the Motor Shield:
-1. In Arduino, select **Sketch**, **Include Library**, and then **Manage
-Libraries**
+Start by reading the Adafruit
+documentation for the [motor
+shield](https://learn.adafruit.com/adafruit-motor-shield-v2-for-arduino/using-dc-motors?view=all) and the [Bluefruit module](https://learn.adafruit.com/introducing-the-adafruit-bluefruit-spi-breakout?view=all)
 
-2. In the search space type **adafruit motor shield v2**
+There are many confusing options but try to get the broad concept.
 
-3. Click in the "Adafruit Motor Shield V2 Library" line and an **Install** button
-will appear. Click the **Install** button.
+## Construction
 
-4. Close the Library Manager window
+### Planning
 
-### First make sure that no pins conflict. Studying the documentation, we find that:
+First make sure that no pins conflict. Studying the documentation, we find that:
 
 * Adafruit Motor Shield V2 uses the two I2C pins (SCA and SDL). On an Arduino
 Uno these are on pins A4 and A5. If you plan to attach servo motors to the
@@ -24,11 +23,13 @@ shield, this uses pins 9 and 10 additionally.
   the default wiring would use pins 4, 7, 8, 11, 12, and 13. (This can be
 	changed, see the documentation)
 
-### Construction
+This means that we can use the default wiring for both devices.
+The motor shield can not be changed, but the Bluefruit module
+can be wired differently. 
+Unless you have a good reason to do differently,
+it's usually a good idea to start with the default.
 
-Start by drawing a schematic. As you read, there are many options, but
-it's usually a good idea to start with the default unless you have a 
-good reason to do differently.
+Start by drawing a schematic. 
 
 I started with
 [this](https://learn.adafruit.com/introducing-the-adafruit-bluefruit-spi-breakout/wiring#default-pinout)
@@ -58,6 +59,8 @@ connect to the header. You must make this connection yourself by folding the
 wire on the back side of the board and soldering it to the header pin
 
 ![Wiring Diagram](images/bluefruit/diagram.jpg)
+
+### Soldering
 
 Solder in the female header
 
@@ -151,7 +154,18 @@ two (or more) adjacent pins together.
 
 For many more pictures of the assembly process look [here](extraImages.md)
 
-### Software
+## Software
+
+### If you have not already done so, install the library for the Motor Shield:
+1. In Arduino, select **Sketch**, **Include Library**, and then **Manage
+Libraries**
+
+2. In the search space type **adafruit motor shield v2**
+
+3. Click in the "Adafruit Motor Shield V2 Library" line and an **Install** button
+will appear. Click the **Install** button.
+
+4. Close the Library Manager window
 
 For a code example, see [this example](motorShieldAndBluefruit/motorShieldAndBluefruit.ino)
 
@@ -184,7 +198,7 @@ Find the phrase ```FACTORYRESET_ENABLE``` which will look like this:
 
 Change the 1 to a 0, and this disables factory reset. 
 
-### Providing separate power for servo motors
+# Providing separate power for servo motors
 
 Adafruit has made it easy to provide separate power to the servo
 motors:
