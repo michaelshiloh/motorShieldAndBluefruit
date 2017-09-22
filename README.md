@@ -372,4 +372,6 @@ pre-installed servo headers
 motors. This means more battery packs, and it allows you to have a different
 voltage for the DC motors than the servo motors.
 
+## References
 
+* How does Bluetooth [work](https://www.sparkfun.com/news/2481)
