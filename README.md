@@ -271,8 +271,8 @@ connect to your Adafruit Bluefruit LE device. You should see some activity
 on your serial monitor and the blue light on your Bluetooth module may
 illuminate.
 
-12. You might be asked to update the firmware. This is safe and smart to do
-this. This process might take a good 5-10 minutes (depending on network speed)
+12. You might be asked to update the firmware. This is safe and recommended.
+This process might take a good 5-10 minutes (depending on network speed)
 so be patient. If you update firmware your phone might disconnect and ask you to
 reconnect. If so, repeat the step above.
 
