@@ -63,104 +63,112 @@ wire on the back side of the board and soldering it to the header pin
 
 ### Soldering
 
-Solder in the female header
-
-![75](images/bluefruit/75.jpg)
-
 Before you start soldering the wires in place, think about the order.
 Will any wires block holes 
 that you later need access to? 
 
-Wire colors are very important! Always use red for 5V and black for ground (or
-GND). Don't use these colors for any other connections.
+**Wire colors are very important! Always use red for 5V and black for ground (or
+GND). Don't use these colors for any other connections.**
 
-Wire choice is important too: Use 22 AWS solid core wire.
+**Wire choice is important too: Use 22 AWS solid core wire.**
 
-I decided to start with GND and 5V. First GND:
+1. Solder in the female header
 
-![77](images/bluefruit/77.jpg)
+	![75](images/bluefruit/75.jpg)
 
-Don't try to wrap the wires around the pins of the header. There isn't room.
-Just bend the wire a little bit to hold it in place while you solder it.
+1. I decided to start with GND and 5V. First GND:
 
-![87](images/bluefruit/87.jpg)
-![89](images/bluefruit/89.jpg)
+	![77](images/bluefruit/77.jpg)
 
-After soldering the wire to the header pin,
-cut off the excess very close to the pin. Don't be afraid to take
-some solder with it:
+1. Don't try to wrap the wires around the pins of the header. There isn't room.
+	Just bend the wire a little bit to hold it in place while you solder it.
 
-![90](images/bluefruit/90.jpg)
+	![87](images/bluefruit/87.jpg)
+	![89](images/bluefruit/89.jpg)
 
-If you make a mistake, it is usually easier to cut the wire in half and
-to remove each piece separately. 
+	After soldering the wire to the header pin,
+	cut off the excess very close to the pin. Don't be afraid to take
+	some solder with it:
+
+	![90](images/bluefruit/90.jpg)
+
+	If you make a mistake, it is usually easier to cut the wire in half and
+	to remove each piece separately. 
 
 
-![141](images/bluefruit/141.jpg)
-![142](images/bluefruit/142.jpg)
+	![141](images/bluefruit/141.jpg)
+	![142](images/bluefruit/142.jpg)
 
-Think about how the wire is bent and 
-wiggle it gently to unbend it while heating the solder with
-the soldering iron. You can use the soldering iron tip gently
-to help unbend the wires. Try not to use too much force as this might 
-damage the board.
+	Think about how the wire is bent and 
+	wiggle it gently to unbend it while heating the solder with
+	the soldering iron. You can use the soldering iron tip gently
+	to help unbend the wires. Try not to use too much force as this might 
+	damage the board.
 
-Now the 5V wire:
+1.	Now the 5V wire:
 
-![94](images/bluefruit/94.jpg)
+	![94](images/bluefruit/94.jpg)
 
-After every step compare what you have done with the original table (not your
-schematic or diagram in case you made a mistake there). Plug in the module
-and check that the labels on the module corresponds to the pins you are 
-connecting.
+	After every step compare what you have done with the original table (not your
+	schematic or diagram in case you made a mistake there). Plug in the module
+	and check that the labels on the module corresponds to the pins you are 
+	connecting.
 
-If others are near you, ask them to double check your work, and offer to 
-check theirs in return.
+	If others are near you, ask them to double check your work, and offer to 
+	check theirs in return.
 
-Then I added the three that are in a row: pins 13, 12, and 11:
+1.	Then I added the three that are in a row: pins 13, 12, and 11:
 
-![120](images/bluefruit/120.jpg)
-![121](images/bluefruit/121.jpg)
+	![120](images/bluefruit/120.jpg)
+	![121](images/bluefruit/121.jpg)
 
-Check each solder joint as you make it that it is nice and shiny and that 
-you haven't accidentally soldered two pins together.
+	Check each solder joint as you make it that it is nice and shiny and that 
+	you haven't accidentally soldered two pins together.
 
-As you solder each wire, remember to trim off the excess wire very close:
+	As you solder each wire, remember to trim off the excess wire very close:
 
-![124](images/bluefruit/124.jpg)
+	![124](images/bluefruit/124.jpg)
 
-Then CS. Remember that it goes to Arduino pin 8 so make it a little longer
-and double check that you have it in the right holes before you solder:
+1. Then CS. Remember that it goes to Arduino pin 8 so make it a little longer
+	and double check that you have it in the right holes before you solder:
 
-![132](images/bluefruit/132.jpg)
+	![132](images/bluefruit/132.jpg)
 
-At this point I realized that the wire from IRQ to pin 7 might
-cover the hole next to RST, so I did the wire to RST before the wire 
-to IRQ. Remember that you have to skip the DFU pin so think carefully
-and make sure your diagram, your wire, the label on the Arduino pin, the label
-on the Bluefruit module, and the default wiring table are all in
-agreement
-before you solder.
+1.	At this point I realized that the wire from IRQ to pin 7 might
+	cover the hole next to RST, so I did the wire to RST before the wire 
+	to IRQ. Remember that you have to skip the DFU pin so think carefully
+	and make sure your diagram, your wire, the label on the Arduino pin, the label
+	on the Bluefruit module, and the default wiring table are all in
+	agreement
+	before you solder.
 
-![138](images/bluefruit/138.jpg)
+	![138](images/bluefruit/138.jpg)
 
-and finally the wire to IRQ:
+1. and finally the wire to IRQ:
 
-![148](images/bluefruit/148.jpg)
+	![148](images/bluefruit/148.jpg)
 
-Inspect all your solder joints carefully. Make sure all the joints are shiny
-and complete, that the solder flows smoothly over the wire and over the pins.
-Make sure there isn't too much solder, and make sure solder doesn't "bridge"
-two (or more) adjacent pins together.
+1.	Inspect all your solder joints carefully. Make sure all the joints are shiny
+	and complete, that the solder flows smoothly over the wire and over the pins.
+	Make sure there isn't too much solder, and make sure solder doesn't "bridge"
+	two (or more) adjacent pins together.
 
-![150](images/bluefruit/150.jpg)
+	![150](images/bluefruit/150.jpg)
 
-For many more pictures of the assembly process look [here](extraImages.md)
+1.	For many more pictures of the assembly process look [here](extraImages.md)
+
+1. When you plug in your module, make sure it's the right way around. 
+Connect power to the wrong pins can damage your module. I usually look 
+for the red and black wires (which I know are 5V and GND) to go to the
+side of the module with the VIN and GND pins.
+
+Think carefully before you turn anything on: did you make any mistakes?
+
 
 ## Software
 
 Before writing any of your own code, test that each device works 
-with the built in examples
+independently with the built in examples
 
 ### Motor Shield
 
@@ -171,34 +179,131 @@ Libraries**
 
 2. In the search space type **adafruit motor shield v2**
 
-3. Click in the "Adafruit Motor Shield V2 Library" line and an **Install** button
-will appear. Click the **Install** button.
+3. Click in the "Adafruit Motor Shield V2 Library" line and 
+an **Install** button will appear. Click the **Install** button.
 
 4. Close the Library Manager window
 
+6. Open the simple example
+**File** -> **Examples** -> 
+**Adafruit Motor Shield V2 Library** ->
+**DCMotorTest**
+
 5. Test that the library was correctly installed by verifying (compiling)
-one of the built in examples. I usually use **File** -> **Examples** -> 
+the example by pressing the **Verify** button, which is just to the left 
+of the **Upload** button
 
-(not finished yet)
+#### Testing the Motor Shield
 
-#### Test the Motor Shield
+5. You will be following
+[these](https://learn.adafruit.com/adafruit-motor-shield-v2-for-arduino/using-dc-motors?view=all#dc-motor)
+steps.
 
-1. Connect a motor to 
+6. Connect a motor to the two pins labeled M1 on the motor shield 
+as shown in [this](https://learn.adafruit.com/assets/9471) picture
 
-(not finished yet)
+7. For this test you can power the motor from your Arduino, but 
+for reliable project operation it is better to use a separate power supply.
+To use the Arduino power, simply insert the provided shorting block on the
+two pins labeled **VIN Jumper** as shown in
+[this](https://learn.adafruit.com/assets/9472) picture.
+
+8. Upload the 
+**DCMotorTest**
+example. The motor should turn back and forth as explained
+[here](https://learn.adafruit.com/adafruit-motor-shield-v2-for-arduino/using-dc-motors?view=all#dc-motor).
+
+9. Remove the shorting block from the
+[**VIN Jumper**](https://learn.adafruit.com/assets/9472) 
+because from now on you should use separate power for any motors
 
 
 ### Bluefruit SPI Friend
 
 #### Install the Bluefruit SPI Friend library
 
-(tba)
+1. In Arduino, select **Sketch**, **Include Library**, and then **Manage
+Libraries**
+
+2. In the search space type **adafruit nrf51**
+
+3. Click in the 
+"Adafruit BluefruitLE nRF51"
+line and an **Install** button will appear. Click the **Install** button.
+
+4. Close the Library Manager window
+
+6. Open the simple example
+**File** -> **Examples** -> 
+**Adafruit BluefruitLE nRF51**
+**controller**
+
+5. Test that the library was correctly installed by verifying (compiling)
+the example by pressing the **Verify** button, which is just to the left 
+of the **Upload** button.
 
 ### Testing the Bluefruit SPI Friend
 
-(tba)
+5. You will be following
+[these](https://learn.adafruit.com/introducing-the-adafruit-bluefruit-spi-breakout?view=all#controller)
+steps.
+
+8. Upload the 
+**Controller**
+example. Note that the serial port is opened at a different speed (baud rate)
+than we usually use.
+
+9. Open your serial monitor and change the baud rate to agree with the 
+one in the example
+
+10. Download and install the 
+**Adafruit Bluefruit LE Connect app** for
+iOS](https://learn.adafruit.com/bluefruit-le-connect-for-ios)
+or for
+[Android](https://play.google.com/store/apps/details?id=com.adafruit.bluefruit.le.connect&hl=en)
+to your phone
+
+11. Open the app on your phone and 
+connect to your Adafruit Bluefruit LE device. You should see some activity
+on your serial monitor and the blue light on your Bluetooth module may
+illuminate.
+
+12. You might be asked to update the firmware. It is safe and smart to do
+this. It does take a good 5-10 minutes (depending on network speed)
+so be patient. If you update firmware it might disconnect and ask you to
+reconnect. If so, repeat the step above.
+
+12. Once you are connected select **Controller** and then scroll down and
+select the **Control Pad Module**. Now we are following
+[these](https://learn.adafruit.com/introducing-the-adafruit-bluefruit-spi-breakout?view=all#control-pad-module)
+steps. 
+
+13. Press the buttons and observe the correct messages appear in your serial
+monitor.
+
 
 ### Combining the Motor Shield and the Bluefruit SPI Friend
+
+It is best, I think, to start with the Bluefruit Controller built-in 
+example. Scroll down in the code to where the buttons are detected:
+
+```    // Buttons
+    if (packetbuffer[1] == 'B') {
+      uint8_t buttnum = packetbuffer[2] - '0';
+      boolean pressed = packetbuffer[3] - '0';
+      Serial.print ("Button "); Serial.print(buttnum);
+      if (pressed) {
+        Serial.println(" pressed");
+      } else {
+        Serial.println(" released");
+      }
+    }
+```
+
+Basically, you will be adding code that responds to specific buttons
+using the `buttnum` variable and deciding what you want your 
+motors to do based on whether that button was pressed or released (the
+`pressed` variable).
 
 For a code example, see [this example](motorShieldAndBluefruit/motorShieldAndBluefruit.ino)
 
