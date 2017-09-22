@@ -211,7 +211,9 @@ two pins labeled **VIN Jumper** as shown in
 8. Upload the 
 **DCMotorTest**
 example. The motor should turn back and forth as explained
-[here](https://learn.adafruit.com/adafruit-motor-shield-v2-for-arduino/using-dc-motors?view=all#dc-motor).
+at the end of 
+[this](https://learn.adafruit.com/adafruit-motor-shield-v2-for-arduino/using-dc-motors?view=all#dc-motor).
+section.
 
 9. Remove the shorting block from the
 [**VIN Jumper**](https://learn.adafruit.com/assets/9472) 
@@ -254,11 +256,12 @@ example. Note that the serial port is opened at a different speed (baud rate)
 than we usually use.
 
 9. Open your serial monitor and change the baud rate to agree with the 
-one in the example
+one in the example. If you forget this step your serial monitor might not show
+anything, or it might show random characters.
 
 10. Download and install the 
 **Adafruit Bluefruit LE Connect app** for
-iOS](https://learn.adafruit.com/bluefruit-le-connect-for-ios)
+[iOS](https://learn.adafruit.com/bluefruit-le-connect-for-ios)
 or for
 [Android](https://play.google.com/store/apps/details?id=com.adafruit.bluefruit.le.connect&hl=en)
 to your phone
@@ -268,9 +271,9 @@ connect to your Adafruit Bluefruit LE device. You should see some activity
 on your serial monitor and the blue light on your Bluetooth module may
 illuminate.
 
-12. You might be asked to update the firmware. It is safe and smart to do
-this. It does take a good 5-10 minutes (depending on network speed)
-so be patient. If you update firmware it might disconnect and ask you to
+12. You might be asked to update the firmware. This is safe and smart to do
+this. This process might take a good 5-10 minutes (depending on network speed)
+so be patient. If you update firmware your phone might disconnect and ask you to
 reconnect. If so, repeat the step above.
 
 12. Once you are connected select **Controller** and then scroll down and
@@ -305,7 +308,7 @@ using the `buttnum` variable and deciding what you want your
 motors to do based on whether that button was pressed or released (the
 `pressed` variable).
 
-For a code example, see [this example](motorShieldAndBluefruit/motorShieldAndBluefruit.ino)
+For a code example, see [this example](code/motorShieldAndBluefruit/motorShieldAndBluefruit.ino)
 
 ### Changing the name of your Bluefruit Friend
 
